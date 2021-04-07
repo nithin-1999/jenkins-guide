@@ -13,12 +13,7 @@ pipeline {
             -t nodeapp-dev:trunk .'
           }
         }
-        stage('Test-Unit Image') {
-          steps {
-            sh 'docker build -f test-image/Dockerfile \
-            -t test-image:latest .'
-          }
-        }
+       
       }
       post {
         failure {
@@ -82,17 +77,17 @@ pipeline {
             }
     }
 // JUnit reports and artifacts saving
-    stage('REPORTS') {
-      steps {
-        junit 'reports.xml'
-        archiveArtifacts(artifacts: 'reports.xml', allowEmptyArchive: true)
-        archiveArtifacts(artifacts: 'nodeapp-prod-golden.tar.gz', allowEmptyArchive: true)
-      }
-    }
+    // stage('REPORTS') {
+    //   steps {
+    //     junit 'reports.xml'
+    //     archiveArtifacts(artifacts: 'reports.xml', allowEmptyArchive: true)
+    //     archiveArtifacts(artifacts: 'nodeapp-prod-golden.tar.gz', allowEmptyArchive: true)
+    //   }
+    // }
 // Doing containers clean-up to avoid conflicts in future builds
     stage('CLEAN-UP') {
       steps {
-        sh 'docker stop nodeapp-dev test-image'
+        // sh 'docker stop nodeapp-dev test-image'
         sh 'docker system prune -f'
         deleteDir()
       }
