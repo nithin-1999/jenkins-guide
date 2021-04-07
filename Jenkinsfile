@@ -34,7 +34,7 @@
             -p 9000:9000 nodeapp-dev:trunk'
             // sh 'docker run --name test-image -v $PWD:/JUnit --network="bridge" \
             // --link=nodeapp-dev -d -p 9001:9000 \
-            test-image:latest'
+            // test-image:latest'
           }
         }
         stage('Quality Tests') {
