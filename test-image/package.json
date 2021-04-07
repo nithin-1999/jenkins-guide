@@ -1,0 +1,25 @@
+{
+    "name": "test-image",
+    "version": "1.0.0",
+    "description": "This is a Mocha Test Server",
+    "scripts": {
+      "mocha": "mocha --reporter spec test.js",
+      "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=/JUnit/reports.xml test.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>.git"
+    },
+    "author": "Your name",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/issues"
+    },
+    "homepage": "https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>#readme",
+      "dependencies": {
+      "mocha": "^4.0.1",
+      "mocha-junit-reporter": "^1.15.0",
+      "should": "^13.1.3",
+      "supertest": "^3.0.0"
+    }
+  }

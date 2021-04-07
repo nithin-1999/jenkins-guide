@@ -1,0 +1,17 @@
+{
+"name": "express-image",
+"version": "1.0.0",
+"description": "Example Node Application",
+"author": "Your name",
+"repository": {
+  "type": "git",
+  "url": "git+https://github.com/nithin-1999/jenkins-guide.git"
+},
+"license": "ISC",
+"scripts": {
+  "start": "node app.js"
+},
+"dependencies": {
+  "express": "^4.13.3"
+}
+}
